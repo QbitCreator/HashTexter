@@ -239,9 +239,7 @@ window('H4shTexter', 1000, 400) {
 					stretchy false
 					button(">>>ENCRYPT!>>>") {
 						on_clicked do
-							if @cleartext.text==nil
-								@progresstext.text="ERROR: You forgot to choose a file!"
-							elsif @password.text==""	
+							if @password.text==""	
 								@progresstext.text="ERROR: Password empty!"		
 							elsif (not (@cleartext.text.ascii_only?))
 								@progresstext.text="ERROR: text contents are out of the ASCII-range!"
@@ -268,9 +266,7 @@ window('H4shTexter', 1000, 400) {
 					button("<<<DECRYPT!<<<") {
 						
 						on_clicked do
-							if @cryptotext.text==nil
-								@progresstext.text="ERROR: You forgot to choose a file!"
-							elsif @password.text==""	
+							if @password.text==""	
 								@progresstext.text="ERROR: Password empty!"		
 							elsif (not (@cryptotext.text.ascii_only?))
 								@progresstext.text="ERROR: text contents are out of the ASCII-range!"
